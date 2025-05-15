@@ -8,7 +8,7 @@ import tempfile
 # Função para conectar no Google Sheets
 def conectar_planilha():
     # st.secrets["credenciais"] já é um dict
-    credenciais_dict = st.secrets["credenciais"]
+    credenciais_dict = dict(st.secrets["credenciais"])
 
     # Cria arquivo temporário com as credenciais em formato JSON válido
     with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".json") as temp:
