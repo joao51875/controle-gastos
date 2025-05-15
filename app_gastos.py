@@ -51,4 +51,4 @@ if enviar:
         aba.append_row(nova_linha, value_input_option="USER_ENTERED")
         st.success("Registro salvo com sucesso no Google Sheets!")
     except Exception as e:
-        st.error(f"Ocorreu um erro ao salvar: {type(e)._name_}: {e}")
+        st.error(f"Ocorreu um erro ao salvar: {type(e).__name__}: {e}")
