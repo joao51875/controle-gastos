@@ -11,7 +11,13 @@ def conectar_planilha():
         "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive"
     ]
-    credenciais = ServiceAccountCredentials.from_json_keyfile_name("credenciais.json", escopo)
+   import json
+import tempfile
+
+with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".json") as temp:
+    temp.write(st.secrets["credenciais"])
+    temp.flush()
+    gc = gspread.service_account(filename=temp.name)
     cliente = gspread.authorize(credenciais)
     planilha = cliente.open("controle_gastos")
     aba = planilha.worksheet("Dados")
