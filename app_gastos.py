@@ -8,19 +8,27 @@ import tempfile
 
 # Conectar ao Google Sheets
 def conectar_planilha():
+    escopo = [
+        "https://spreadsheets.google.com/feeds",
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive"
+    ]
+
+    # Converte st.secrets["credenciais"] para JSON string
+    credenciais_json = json.dumps(st.secrets["credenciais"])
+
+    # Salva temporariamente as credenciais
     with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".json") as temp:
-        # Converte o dicionário de segredos em string JSON e salva no arquivo temporário
-        json.dump(st.secrets["credenciais"], temp)
+        temp.write(credenciais_json)
         temp.flush()
         gc = gspread.service_account(filename=temp.name)
         planilha = gc.open("controle_gastos")
         aba = planilha.worksheet("Dados")
         return aba
 
-# Título do app
+# Interface do app
 st.title("Registro de Gastos e Rendas")
 
-# Formulário
 with st.form("form_gastos"):
     data = st.date_input("Data", value=date.today())
     tipo = st.selectbox("Tipo", ["Gasto", "Renda"])
