@@ -12,7 +12,7 @@ def conectar_planilha():
         "https://www.googleapis.com/auth/drive"
     ]
    import json
-import tempfile
+   import tempfile
 
 with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".json") as temp:
     temp.write(st.secrets["credenciais"])
