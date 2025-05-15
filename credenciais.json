@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "app-de-gastos-459917",
+  "private_key_id": "d979a07bb1b029e997860b4b868fb12bc73b300a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC5nd1fSEk/AetB\n35LWmriolfTDq9X2FHTI/Fxj4qbdcGOP9TMNBzpDO8bCZ46AWjED1SPrZj460n8H\noNJiLjAqKpVyNGSTDwo0IDIlEFDlVVFO3B8HjWbmEuPN7N/mRMpKweBJ8uPJpQYZ\nKjCWbUJguYI7sLF3OujENUQ5yFeOS+fRDzlaofb2fUKNBlCHK/Hnqc22tjhRpxBI\ncPnu9Ola3iYpVr9uA7KCvtbqAbLw2BBxjAenNlGe+pIHhWIkN59uZ6MoKYg6fQh7\nkhalTSvbCwToJWWpQNqqn9Zz4fDng04peZeOvTP0CorLpMpewuNiGM9vy8mn/nr8\naJee6SW5AgMBAAECggEAK87F3gSWAPBngVMOeWbn2SYXMA1AwMTgMUVaWtq17kJl\nxSamR1di2VZk2SIOwF1I/zIRObAWVNS0VW0P6ksjY/hL8DnMWObuThIhM50vsoiZ\n2YZbLnGhjQB9Um8rAtJOeila0akpOMCheVP7Rq1/wotV4NeZct3s7M3zjb2qaHM7\npy1KduSS6HF8sgYfZbpD19heOegm/We9GaEcqewKd5D0ng+2K0Z+zR+LdwFOfJtI\nqZZblAvdlmbLpMMeQf0fa34aSJylcjtxrUNZZkSG43kPa4z/6YObX1g+pd4TfrVh\n6pr6BZzgv229v3cVHHz99j+yBfWl7fk+ux26GIHtNwKBgQDoRCXrhrSzFS6bIrXY\nNhLgxqKDs6je+hj/+Se/pwCUYRzFvJIda3JXzjIgwZmDDYGJ1QmSCPZ0DroJt/CV\nPrxJ6W15vAICfcSA4q0+Iv3klC0iKDCBcY9rIodXST2/i05AA+HZFJtIDZU+hVUs\nC4omgErDkDdSju88/dhH12gyxwKBgQDMlWk/dWvCGLJDSnT9nqLJA+VASsK5Fm6R\nQEu2tay+PtLCoQN9NZ/X4rIoBth+LMcf/XStmlpJY0K1SWuFs4RMP8LgoNyWagbC\nOaKbSzixNd6wssI2o/XGo7NWkuQwWqlp8B5oZQxkIw8rCYOraEfmMnzRlCnJ5lHw\nSmAg78NjfwKBgQDIzyqNv+/4qMabn93iKZYWugWFok3NQiNdI7fm7ecFYhSzLL6T\nKvM30PDr+xXTBVlKpmJY3ODfJGBZyKr7DbtSl7trtU1zg/Lhj5lCkJQ8DJQc5OxS\n7bCWasrif1MgiLtFg1W/Dh7Wo8+1tycVJoDxmpeJDuWVvjg+3iUgr67JvwKBgChO\nh53pFIH5O6XmVYZiatAP5Gr2T8cHlGEpucEVqiMRXZTbBET2+7cdAty//Idfaxvy\nY7qQXpl25P2yqWx+IeKj7VE0YEGCQjKiCFdwSosfgfBuR7VcOGAagIreBfdA5X/p\nvxPyVK6l+acRCNAMi53e9JiWCGWu6xXckXPrySMhAoGAW83X5fVyKp+MZnCJSV1u\n8iBx3k2U1RCuyPudardrO1+62Ppi4vIn/qCIxcsv+Jm6VwuXX5uepGWSYG6iunHa\nSCDT+WsMOvwUaxjuCGZ+JJ2faZmlJUdKTWdsnBhYoAiNZUMq/a8DNaJM0uXLyXBE\nPtWReuDNEVACK+/rVEfi45I=\n-----END PRIVATE KEY-----\n",
+  "client_email": "streamlit-gastos@app-de-gastos-459917.iam.gserviceaccount.com",
+  "client_id": "103031982668384381038",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/streamlit-gastos%40app-de-gastos-459917.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
