@@ -2,25 +2,20 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 import json
 import tempfile
 
-# Conectar ao Google Sheets
+# Função para conectar no Google Sheets
 def conectar_planilha():
-    escopo = [
-        "https://spreadsheets.google.com/feeds",
-        "https://www.googleapis.com/auth/spreadsheets",
-        "https://www.googleapis.com/auth/drive"
-    ]
+    # st.secrets["credenciais"] já é um dict
+    credenciais_dict = st.secrets["credenciais"]
 
-    # Converte st.secrets["credenciais"] para JSON string
-    credenciais_json = json.dumps(st.secrets["credenciais"])
-
-    # Salva temporariamente as credenciais
+    # Cria arquivo temporário com as credenciais em formato JSON válido
     with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".json") as temp:
-        temp.write(credenciais_json)
+        json.dump(credenciais_dict, temp)
         temp.flush()
+
+        # Conecta com gspread usando o arquivo temporário
         gc = gspread.service_account(filename=temp.name)
         planilha = gc.open("controle_gastos")
         aba = planilha.worksheet("Dados")
