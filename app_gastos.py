@@ -2,26 +2,25 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+import tempfile
 
 # Conectar ao Google Sheets
 def conectar_planilha():
+    # Escopo de acesso
     escopo = [
         "https://spreadsheets.google.com/feeds",
         "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive"
     ]
-   import json
-   import tempfile
 
-with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".json") as temp:
-    temp.write(st.secrets["credenciais"])
-    temp.flush()
-    gc = gspread.service_account(filename=temp.name)
-    cliente = gspread.authorize(credenciais)
-    planilha = cliente.open("controle_gastos")
-    aba = planilha.worksheet("Dados")
-    return aba
+    # Criar arquivo temporário com as credenciais
+    with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix=".json") as temp:
+        temp.write(st.secrets["credenciais"])
+        temp.flush()
+        gc = gspread.service_account(filename=temp.name)
+        planilha = gc.open("controle_gastos")  # Nome exato da planilha no Google Sheets
+        aba = planilha.worksheet("Dados")      # Nome exato da aba na planilha
+        return aba
 
 # Interface do app
 st.title("Registro de Gastos e Rendas")
@@ -52,4 +51,4 @@ if enviar:
         aba.append_row(nova_linha, value_input_option="USER_ENTERED")
         st.success("Registro salvo com sucesso no Google Sheets!")
     except Exception as e:
-        st.error(f"Ocorreu um erro ao salvar: {type(e).__name__}: {e}")
+        st.error(f"Ocorreu um erro ao salvar: {type(e)._name_}: {e}")
